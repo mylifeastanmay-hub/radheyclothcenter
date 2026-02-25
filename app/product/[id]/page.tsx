@@ -159,7 +159,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   const handleAdd = () => {
     if (!selectedSize) { alert('Please select a size'); return }
-    addItem({ ...product, quantity })
+    for (let i = 0; i < quantity; i++) addItem(product)
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
   }
